@@ -1,0 +1,152 @@
+<script>
+  /* For demonstration purposes only. Do this in the preferred way of your framework instead. */
+  window.demoSideMenu = document.querySelector("#demo-side-menu");
+</script>
+<style>
+  :root {
+    --app-bar-height: 64px;
+  }
+
+  /* Note: to make the layout fill the entire viewport height you'll need to set the */
+  /* height of the parent element and all of its ancestors to 100%. */
+  /* Please note that using 'vh' for this can cause issues on some mobile browsers. */
+  .demo-layout {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .demo-header {
+    position: sticky;
+    top: 0;
+  }
+  .demo-wrap-side-menu-and-main {
+    display: flex;
+    flex-grow: 1;
+  }
+
+      /* the lg breakpoint is used here to match the breakpoint used in the Header */
+  @media (min-width: 992px) {
+    #demo-side-menu {
+      /* We suggest you attach the persistent Side Menu to your layout like this: */
+      height: calc(100vh - var(--app-bar-height));
+      position: sticky;
+      top: var(--app-bar-height);
+      left: 0px;
+    }
+  }
+  /* If an extra button in the Header is required except on */
+  /* very narrow screens, you can use classes like these: */
+  .demo-hide {
+    display: none;
+  }
+
+  /* https://tegel.scania.com/components/header#:~:text=breakpoints%20larger%20than-,%24small%2D375.,-On%20smaller%20breakpoints */
+  @media (min-width: 375px) {
+    .demo-xs-hide {
+      display: none;
+    }
+    .demo-xs-show {
+      display: block;
+    }
+  }
+</style>
+
+<div class="demo-layout">
+
+  <div class="demo-wrap-side-menu-and-main">
+    <!-- Note: the "persistent" property keeps the menu open on desktop -->
+    <tds-side-menu aria-label="Side menu" id="demo-side-menu" persistent>
+      <tds-side-menu-overlay
+        slot="overlay"
+        onclick="demoSideMenu.open = false;"
+      ></tds-side-menu-overlay>
+
+      <tds-side-menu-close-button
+        slot="close-button"
+        aria-label="Close drawer menu"
+        onclick="demoSideMenu.open = false;"
+      ></tds-side-menu-close-button>
+      <tds-side-menu-dropdown id="wheel-types-dropdown">
+        <tds-icon slot="icon" name="calendar" size="24px"></tds-icon>
+        <span slot="label">Fechamento</span>
+        <tds-side-menu-dropdown-list>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Pré-Fechamento</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Configurações</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Relatórios</a>
+          </tds-side-menu-dropdown-list-item>
+        </tds-side-menu-dropdown-list>
+      </tds-side-menu-dropdown>
+
+      <tds-side-menu-dropdown id="wheel-types-dropdown">
+        <tds-icon slot="icon" name="smartphone" size="24px"></tds-icon>
+        <span slot="label">Equipamentos</span>
+        <tds-side-menu-dropdown-list>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Ramais</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Celulares/Tablets</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Computadores</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Impressoras</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Coletores</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Codin</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Licenças</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Dockstations</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Monitor</a>
+          </tds-side-menu-dropdown-list-item>
+        </tds-side-menu-dropdown-list>
+      </tds-side-menu-dropdown>
+
+      <tds-side-menu-dropdown id="wheel-types-dropdown">
+        <tds-icon slot="icon" name="profile" size="24px"></tds-icon>
+        <span slot="label">Perfis</span>
+        <tds-side-menu-dropdown-list>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Controllers</a>
+          </tds-side-menu-dropdown-list-item>
+          <tds-side-menu-dropdown-list-item>
+            <a href="https://www.scania.com">Secretárias</a>
+          </tds-side-menu-dropdown-list-item>
+        </tds-side-menu-dropdown-list>
+      </tds-side-menu-dropdown>
+
+    </tds-side-menu>
+
+  </div>
+</div>
+<script>
+  sideMenu = document.querySelector("tds-side-menu");
+  document.querySelector("#test")?.addEventListener("click", () => {
+    sideMenu.collapsed = !sideMenu.collapsed;
+  });
+
+  wheelTypesDropdown = document.querySelector("#wheel-types-dropdown");
+  document.querySelector("#toggleExpandedTest")?.addEventListener("click", () => {
+    wheelTypesDropdown.open = !wheelTypesDropdown.open;
+  });
+
+  document
+    .querySelector("tds-side-menu-collapse-button")
+    ?.addEventListener("tdsCollapse", (event) => {
+      console.log(event);
+    });
+</script>
