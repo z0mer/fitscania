@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { FooterComponent } from './componentes/footer/footer.component';
+import { PreFechamentoComponent } from './componentes/itensMenu/Fechamento/pre-fechamento/pre-fechamento.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     MenuComponent,
-    FooterComponent
+    FooterComponent,
+    PreFechamentoComponent
   ],
   imports: [
     BrowserModule,
