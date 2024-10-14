@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './componentes/header/header.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { FooterComponent } from './componentes/footer/footer.component';
-import { PreFechamentoComponent } from './componentes/itensMenu/Fechamento/pre-fechamento/pre-fechamento.component';
+import { PreFechamentoComponent } from './componentes/itensMenu/Fechamento/preFechamento/preFechamento.component';
 import { ConfiguracoesComponent } from './componentes/itensMenu/Fechamento/configuracoes/configuracoes.component';
+import { ApontamentosComponent } from './componentes/itensMenu/Fechamento/preFechamento/apontamentos/apontamentos.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ConfiguracoesComponent } from './componentes/itensMenu/Fechamento/confi
     MenuComponent,
     FooterComponent,
     PreFechamentoComponent,
-    ConfiguracoesComponent
+    ConfiguracoesComponent,
+    ApontamentosComponent,
   ],
   imports: [
     BrowserModule,

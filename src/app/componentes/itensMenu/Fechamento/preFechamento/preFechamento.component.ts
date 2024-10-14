@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pre-fechamento',
-  templateUrl: './pre-fechamento.component.html',
-  styleUrls: ['./pre-fechamento.component.css']
+  templateUrl: './preFechamento.component.html',
+  styleUrls: ['./preFechamento.component.css']
 })
 export class PreFechamentoComponent implements OnInit {
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreFechamentoComponent } from './pre-fechamento.component';
+import { PreFechamentoComponent } from './preFechamento.component';
 
 describe('PreFechamentoComponent', () => {
   let component: PreFechamentoComponent;

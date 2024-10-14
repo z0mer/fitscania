@@ -1,0 +1,130 @@
+<h1>Apontamentos</h1>
+
+<div>
+  <form class="filtros">
+      <div class="tds-container">
+
+          <div class="demo-wrapper">
+              <div class="tds-row">
+
+                  <div class="tds-col-max-12 tds-col-xxlg-12 tds-col-xlg-12 tds-col-lg-12 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                      <h2 class="tds-headline-03">Mater</h2>
+                  </div>
+                  <!--Primeira linha dos filtros-->
+                  <div class="tds-col-max-3 tds-col-xxlg-3 tds-col-xlg-3 tds-col-lg-3 tds-col-md-3 tds-col-sm-12 tds-col-xs-12">
+                      <h1 class="tds-label">CNPJ</h1>
+                      <tds-text-field type="text" size="sm" helper="Campo obrigatório" label-position="outside"
+                          formControlName="cnpj" placeholder="99.999.999/9999-99" no-min-width ngDefaultControl >
+                      </tds-text-field>
+                      <p >a</p>
+                  </div>
+
+                  <div class="tds-col-max-1 tds-col-xxlg-1 tds-col-xlg-1 tds-col-lg-1 tds-col-md-1 tds-col-sm-12 tds-col-xs-12">
+                      <h1 class="tds-label">UF</h1>
+                      <p formControlName="uf">b</p>
+                  </div>
+
+                  <div
+                      class="tds-col-max-2 tds-col-xxlg-2 tds-col-xlg-2 tds-col-lg-2 tds-col-md-2 tds-col-sm-12 tds-col-xs-12">
+                      <h1 class="tds-label">Razão Social</h1>
+                      <p formControlName="razaoSocial" >c</p>
+                  </div>
+
+                  <div class="tds-col-max-6 tds-col-xxlg-6 tds-col-xlg-6 tds-col-lg-6 tds-col-md-6 tds-col-sm-12 tds-col-xs-12">
+                      <div
+                          class="tds-col-max-12 tds-col-xxlg-12 tds-col-xlg-12 tds-col-lg-12 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                          <h1 class="tds-label">Data de Emissão</h1>
+                      </div>
+
+                      <div class="tds-row">
+                          <div
+                              class="tds-col-max-6 tds-col-xxlg-6 tds-col-xlg-6 tds-col-lg-6 tds-col-md-6 tds-col-sm-12 tds-col-xs-12">
+                              <tds-datetime id="datetime" type="date" size="sm" state="none" formControlName="dataEmissaoIni" helper="De:" ngDefaultControl no-min-width></tds-datetime>
+                          </div>
+
+                          <div
+                              class="tds-col-max-6 tds-col-xxlg-6 tds-col-xlg-6 tds-col-lg-6 tds-col-md-6 tds-col-sm-12 tds-col-xs-12">
+                              <tds-datetime id="datetime" type="date" size="sm" state="none" formControlName="dataEmissaoFim" helper="Até:" ngDefaultControl no-min-width></tds-datetime>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!--Segunda Linha dos Filtros-->
+                  <div class="tds-col-max-4 tds-col-xxlg-4 tds-col-xlg-4 tds-col-lg-4 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                      <h1 class="tds-label">Tipo</h1>
+
+                      <div class="tds-row tipos">
+                          <div class="tds-col-max-4 tds-col-xxlg-4 tds-col-xlg-4 tds-col-lg-4 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                              <tds-radio-button name="statusNFQ" value="Pendentes" radio-id="pendente" required="false" checked="true">
+                                  <div slot="label">Pendentes</div>
+                              </tds-radio-button>
+                          </div>
+                          <div class="tds-col-max-4 tds-col-xxlg-4 tds-col-xlg-4 tds-col-lg-4 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                              <tds-radio-button name="statusNFQ" value="Encerrados" radio-id="encerrado" required="false">
+                                  <div slot="label">Encerrados</div>
+                              </tds-radio-button>
+                          </div>
+                          <div class="tds-col-max-4 tds-col-xxlg-4 tds-col-xlg-4 tds-col-lg-4 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                              <tds-radio-button name="statusNFQ" value="Todos" radio-id="todos" required="false">
+                                  <div slot="label">Todos</div>
+                              </tds-radio-button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="tds-col-max-6 tds-col-xxlg-6 tds-col-xlg-6 tds-col-lg-6 tds-col-md-12 tds-col-sm-12 tds-col-xs-12">
+                      <h1 class="tds-label">NF-e</h1>
+
+                      <div class="tds-row">
+                          <div
+                              class="tds-col-max-6 tds-col-xxlg-6 tds-col-xlg-6 tds-col-lg-6 tds-col-md-6 tds-col-sm-12 tds-col-xs-12">
+                              <tds-text-field type="text" size="sm" formControlName="nfeIni" ngDefaultControl helper="De:" labelPosition="outside">
+                              </tds-text-field>
+                          </div>
+                          <div
+                              class="tds-col-max-6 tds-col-xxlg-6 tds-col-xlg-6 tds-col-lg-6 tds-col-md-6 tds-col-sm-12 tds-col-xs-12">
+                              <tds-text-field type="text" size="sm" formControlName="nfeFim" ngDefaultControl helper="Até:" labelPosition="outside">
+                              </tds-text-field>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div
+                      class="tds-col-max-1 tds-col-xxlg-1 tds-col-xlg-1 tds-col-lg-1 tds-col-md-1 tds-col-sm-12 tds-col-xs-12">
+                      <tds-button type="button" variant="primary" size="sm" text="Buscar" class="btn-search-m"></tds-button>
+                  </div>
+
+                  <div class="tds-col-max-1 tds-col-xxlg-1 tds-col-xlg-1 tds-col-lg-1 tds-col-md-1 tds-col-sm-12 tds-col-xs-12">
+                      <tds-button type="button" variant="primary" size="sm" text="Extrair XLS" class="btn-search-m"></tds-button> <!--adicionar a função para extrair o XLS-->
+                  </div>
+
+                  </div>
+          </div>
+      </div>
+  </form>
+
+  <div class="tds-container" >
+      <h1 class="tds-label-resp">Remessa</h1>
+      <div class="querys">
+          <div >
+              <p>Carregando Remessa...</p>
+          </div>
+      </div>
+      <h1 class="tds-label-resp">Complemento</h1>
+      <div class="querys">
+          <div>
+              <p>Carregando Complemento...</p>
+          </div>
+      </div>
+      <h1 class="tds-label-resp">Retorno</h1>
+      <div class="querys">
+          <div>
+              <p>Carregando Retorno...</p>
+          </div>
+      </div>
+  </div>
+
+  <div>
+      <p class="template">Aguardando a busca</p>
+  </div>
+</div>
