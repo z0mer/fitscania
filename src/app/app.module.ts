@@ -8,6 +8,7 @@ import { HeaderComponent } from './componentes/header/header.component';
 import { MenuComponent } from './componentes/menu/menu.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { PreFechamentoComponent } from './componentes/itensMenu/Fechamento/pre-fechamento/pre-fechamento.component';
+import { ConfiguracoesComponent } from './componentes/itensMenu/Fechamento/configuracoes/configuracoes.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { PreFechamentoComponent } from './componentes/itensMenu/Fechamento/pre-f
     HeaderComponent,
     MenuComponent,
     FooterComponent,
-    PreFechamentoComponent
+    PreFechamentoComponent,
+    ConfiguracoesComponent
   ],
   imports: [
     BrowserModule,

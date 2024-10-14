@@ -1,0 +1,12 @@
+main {
+  display: flex;
+  gap: 20px;
+}
+
+.sdds-container {
+  min-height: -webkit-calc(90vh - 100px);
+  min-height: -moz-calc(90vh - 100px);
+  min-height: calc(90vh - 100px);
+}
+
+
