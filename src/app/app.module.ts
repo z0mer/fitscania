@@ -13,6 +13,9 @@ import { ApontamentosComponent } from './componentes/itensMenu/Fechamento/preFec
 import { EquipamentosComponent } from './componentes/itensMenu/Fechamento/preFechamento/equipamentos/equipamentos.component';
 import { MtmComponent } from './componentes/itensMenu/Fechamento/preFechamento/mtm/mtm.component';
 import { OperationsComponent } from './componentes/itensMenu/Fechamento/preFechamento/operations/operations.component';
+import { OutrosComponent } from './componentes/itensMenu/Fechamento/preFechamento/outros/outros.component';
+import { FixedBudgetComponent } from './componentes/itensMenu/Fechamento/preFechamento/fixed-budget/fixed-budget.component';
+import { ContractsComponent } from './componentes/itensMenu/Fechamento/preFechamento/contracts/contracts.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { OperationsComponent } from './componentes/itensMenu/Fechamento/preFecha
     EquipamentosComponent,
     MtmComponent,
     OperationsComponent,
+    OutrosComponent,
+    FixedBudgetComponent,
+    ContractsComponent,
   ],
   imports: [
     BrowserModule,

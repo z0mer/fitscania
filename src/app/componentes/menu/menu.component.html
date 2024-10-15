@@ -60,12 +60,17 @@
         slot="overlay"
         onclick="demoSideMenu.open = false;"
       ></tds-side-menu-overlay>
-
       <tds-side-menu-close-button
         slot="close-button"
         aria-label="Close drawer menu"
         onclick="demoSideMenu.open = false;"
       ></tds-side-menu-close-button>
+      <tds-side-menu-item>
+        <button routerLink="/">
+          <tds-icon name="home" size="24px"></tds-icon>
+          Menu
+        </button>
+      </tds-side-menu-item>
       <tds-side-menu-dropdown id="wheel-types-dropdown">
         <tds-icon slot="icon" name="calendar" size="24px"></tds-icon>
         <span slot="label">Fechamento</span>

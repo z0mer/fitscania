@@ -1,1 +1,80 @@
-<p>operations works!</p>
+<h1>Operations</h1>
+
+<!--Aviso na tela-->
+<div class="informacao">
+  <tds-message
+  variant="information"
+  mode-variant="inherit from parent">
+    Início do processo de fechamento de 'Operations'. <br>
+    ✦ Gere o relatório. <br>
+    ✦ Aprove o relatório. <br>
+    Após a aprovação do relatório o processo de fechamento de 'Operations' será iniciado.
+  </tds-message>
+</div>
+
+<!--Primeira fila de Labels-->
+<div class="container">
+
+  <tds-text-field class="data"
+  type="Date"
+  size="lg"
+  label="Data Contábil"
+  label-position="outside"
+  placeholder="Placeholder"
+  >
+  </tds-text-field>
+
+  <tds-button class="botao"
+  type="button"
+  variant="primary"
+  size="lg"
+  text="Gerar Relatório">
+    <tds-icon slot="icon" name="send" size="20px"></tds-icon>
+  </tds-button>
+</div>
+
+<!--Segunda fila de Labels-->
+<div class="container2">
+  <tds-dropdown class="semanai"
+  name="dropdown"
+  size="lg"
+  label="Centro de Custo de Crédito"
+  label-position="outside"
+  placeholder="Selecione uma opção"
+  open-direction="auto"
+  >
+    <tds-dropdown-option value="option-1">2024 / W30 - 22.07.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-2">2024 / W31 - 29.07.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-3">2024 / W32 - 05.08.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-4">2024 / W33 - 12.08.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-5">2024 / W34 - 19.08.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-6">2024 / W35 - 26.08.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-7">2024 / W36 - 02.09.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-8">2024 / W37 - 09.09.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-9">2024 / W38 - 16.09.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-10">2024 / W39 - 23.09.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-11">2024 / W40 - 30.09.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-12">2024 / W41 - 07.10.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-13">2024 / W42 - 14.10.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-14">2024 / W43 - 21.10.2024</tds-dropdown-option>
+    <tds-dropdown-option value="option-15">2024 / W44 - 28.10.2024</tds-dropdown-option>
+  </tds-dropdown>
+
+<tds-button class="botao"
+  type="button"
+  variant="primary"
+  size="lg"
+  text="Exportar Excel">
+    <tds-icon slot="icon" name="save" size="20px"></tds-icon>
+</tds-button>
+
+</div>
+
+<!--Divisão de tela-->
+<div class="divisao">
+  <div style="width: 900px;">
+    <tds-divider orientation="horizontal"></tds-divider>
+  </div>
+</div>
+
+<p>tabela vai aq, junto com outro botão</p>
