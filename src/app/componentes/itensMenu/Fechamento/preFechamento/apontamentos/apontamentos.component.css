@@ -1,0 +1,42 @@
+.container{
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.exibir{
+  width: 208px;
+}
+
+.data{
+  width: 208px;
+}
+
+.botao{
+  margin-top: 24px;
+  width: 208px;
+}
+
+.container2{
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.semanai{
+  width: 208px;
+}
+
+.semanaf{
+  width: 208px;
+}
+
+.divisao{
+  margin-top: 24px;
+}
+
+.tabela{
+  margin-top: 16px;
+  padding: 8px;
+  margin-bottom: 16px;
+}

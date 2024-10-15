@@ -6,6 +6,7 @@ import { FooterComponent } from './componentes/footer/footer.component';
 import { PreFechamentoComponent } from './componentes/itensMenu/Fechamento/preFechamento/preFechamento.component';
 import { ConfiguracoesComponent } from './componentes/itensMenu/Fechamento/configuracoes/configuracoes.component';
 import { ApontamentosComponent } from './componentes/itensMenu/Fechamento/preFechamento/apontamentos/apontamentos.component';
+import { EquipamentosComponent } from './componentes/itensMenu/Fechamento/preFechamento/equipamentos/equipamentos.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'apontamentos',
     component: ApontamentosComponent
+  },
+  {
+    path: 'equipamentos',
+    component: EquipamentosComponent
   },
 ];
 

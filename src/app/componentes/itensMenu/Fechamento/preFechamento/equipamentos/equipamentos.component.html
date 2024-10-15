@@ -1,0 +1,51 @@
+<h1>EQUIPAMENTOS</h1>
+
+<!--Aviso na tela-->
+<div class="informacao">
+  <tds-message
+  variant="information"
+  mode-variant="inherit from parent">
+    Início do processo de fechamento de equipamentos. <br>
+    ✦ Gere o relatório. <br>
+    ✦ Aprove o relatório. <br>
+    Após a aprovação do relatório o processo de fechamento de equipamentos será iniciado.
+  </tds-message>
+</div>
+
+<!--Primeira fila de Labels-->
+<div class="container">
+
+  <tds-text-field class="data"
+  type="Date"
+  size="lg"
+  label="Data Contábil"
+  label-position="outside"
+  placeholder="Placeholder"
+  >
+  </tds-text-field>
+
+  <tds-button class="botao"
+  type="button"
+  variant="primary"
+  size="lg"
+  text="Gerar Relatório">
+    <tds-icon slot="icon" name="send" size="20px"></tds-icon>
+  </tds-button>
+
+  <tds-button class="botao"
+  type="button"
+  variant="primary"
+  size="lg"
+  text="Exportar Excel">
+    <tds-icon slot="icon" name="save" size="20px"></tds-icon>
+  </tds-button>
+</div>
+
+<!--Divisão de tela-->
+<div class="divisao">
+  <div style="width: 900px;">
+    <tds-divider orientation="horizontal"></tds-divider>
+  </div>
+</div>
+
+<p>tabela vai aq, junto com outro botão</p>

@@ -1,0 +1,17 @@
+.container{
+  margin-top: 24px;
+  display: flex;
+  gap: 16px;
+}
+
+.data{
+  width: 208px;
+}
+
+.botao{
+  margin-top: 24px;
+}
+
+.divisao{
+  margin-top: 24px;
+}
