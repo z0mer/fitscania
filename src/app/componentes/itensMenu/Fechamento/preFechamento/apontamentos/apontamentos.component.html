@@ -107,18 +107,42 @@
 <div>
   <tds-table class="tabela">
     <tds-table-header compactDesign="compact-design" responsive="responsive">
-       <tds-header-cell customWidth="100px" cell-key="credito" cell-value="CC Crédito" text-align="center"></tds-header-cell>
-       <tds-header-cell customWidth="100px" cell-key="local" cell-value="Local" text-align="center"></tds-header-cell>
-       <tds-header-cell customWidth="100px" cell-key="debito" cell-value="CC Débito" text-align="center"></tds-header-cell>
-       <tds-header-cell customWidth="100px" cell-key="produto" cell-value="Produto" text-align="center"></tds-header-cell>
-       <tds-header-cell customWidth="100px" cell-key="tipo" cell-value="Tipo" text-align="center"></tds-header-cell>
-       <tds-header-cell customWidth="100px" cell-key="codigo" cell-value="Código" text-align="center"></tds-header-cell>
-       <tds-header-cell customWidth="100px" cell-key="user" cell-value="Usuario" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="credito" cell-value="CC Crédito" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="local" cell-value="Local" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="debito" cell-value="CC Débito" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="produto" cell-value="Produto" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="tipo" cell-value="Tipo" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="codigo" cell-value="Código" text-align="center"></tds-header-cell>
+      <tds-header-cell customWidth="100px" cell-key="user" cell-value="Usuario" text-align="center"></tds-header-cell>
     </tds-table-header>
     <tds-table-body responsive="responsive">
-      <tds-table-body-row>
-        <tds-body-cell customWidth="100px" cell-key="teste" cell-value="tst" text-align="center"></tds-body-cell>
-      </tds-table-body-row>
+      <ng-container *ngFor="let item of tabelaDados">
+        <tds-table-body-row>
+          <tds-body-cell customWidth="100px" cell-key="credito" text-align="center">
+            {{ item.CostCenterCredit }}
+          </tds-body-cell>
+          <tds-body-cell customWidth="100px" cell-key="local" text-align="center">
+            {{ converterData(item.AccountDate) }}
+          </tds-body-cell>
+          <tds-body-cell customWidth="100px" cell-key="debito" text-align="center">
+            <span *ngFor="let debito of item.DebitCostCenters; let last = last">
+              {{ debito.CostCenter }}<span *ngIf="!last">, </span>
+            </span>
+          </tds-body-cell>
+          <tds-body-cell customWidth="100px" cell-key="produto" text-align="center">
+            {{ item.Description }}
+          </tds-body-cell>
+          <tds-body-cell customWidth="100px" cell-key="tipo" text-align="center">
+          </tds-body-cell>
+          <tds-body-cell customWidth="100px" cell-key="codigo" text-align="center">
+          </tds-body-cell>
+          <tds-body-cell customWidth="100px" cell-key="user" text-align="center">
+            Usuário Exemplo <!-- Substitua por um campo real se disponível -->
+          </tds-body-cell>
+        </tds-table-body-row>
+      </ng-container>
     </tds-table-body>
   </tds-table>
 </div>
+
+

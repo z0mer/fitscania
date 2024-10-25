@@ -16,6 +16,7 @@ import { OperationsComponent } from './componentes/itensMenu/Fechamento/preFecha
 import { OutrosComponent } from './componentes/itensMenu/Fechamento/preFechamento/outros/outros.component';
 import { FixedBudgetComponent } from './componentes/itensMenu/Fechamento/preFechamento/fixed-budget/fixed-budget.component';
 import { ContractsComponent } from './componentes/itensMenu/Fechamento/preFechamento/contracts/contracts.component';
+import { TesteServiceService } from './service/teste-service.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ContractsComponent } from './componentes/itensMenu/Fechamento/preFecham
     AppRoutingModule,
     TegelModule
   ],
-  providers: [],
+  providers: [TesteServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,2 +1,18 @@
-<h1>Página de Configurações</h1>
-<p>Conteúdo da página de configurações será exibido aqui.</p>
+<h1>Configurações</h1>
+
+<tds-dropdown
+   name="dropdown"
+   label-position="outside"
+   placeholder="Selecione uma página"
+   size="lg"
+   open-direction="auto"
+  >
+    <tds-dropdown-option routerLink="/apontamentos">Apontamentos</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/equipamentos">Equipamentos</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/mtm">MTM</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/operations">Operations</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/outros">Outros</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/fixedBudget">Fixed Budget</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/contracts">Contracts</tds-dropdown-option>
+    <tds-dropdown-option routerLink="/">Histórico</tds-dropdown-option>
+</tds-dropdown>
